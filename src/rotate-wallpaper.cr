@@ -24,10 +24,10 @@ module Rotate::Wallpaper
   # @return [Int32]
   def self.sleep_time
     @@sleep_time ||= begin
-                       ENV.fetch("ROTATE_WALL_INTERVAL", "3600").to_i
-                     rescue
-                       3600
-                     end
+      ENV.fetch("ROTATE_WALL_INTERVAL", "3600").to_i
+    rescue
+      3600
+    end
   end
 end
 
